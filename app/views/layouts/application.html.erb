@@ -16,6 +16,19 @@
         <li>
           <%= link_to "投稿フォーム", new_post_image_path %>
         </li>
+        
+        <li>
+          <%= link_to "マイページ", user_path(current_user.id) %>
+        </li>
+        
+        
+        <!--ここから勝手に記述-->
+        <li>
+          <%= link_to "一覧ページ(index)", post_images_path %>
+        </li>
+        <!--ここまで-->
+        
+        
         <li>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         </li>

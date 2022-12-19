@@ -7,8 +7,11 @@ class PostImagesController < ApplicationController
   def create
     @post_image = PostImage.new(post_image_params)
     @post_image.user_id = current_user.id #current_userはdeviseのヘルパーメソッド。ログイン中のユーザーの情報を取得できる。current_user.XX のように扱う.id //.name //.emailなど
-    @post_image.save
-    redirect_to post_images_path
+    if @post_image.save
+      redirect_to post_images_path
+    else
+      render :new
+    end
   end
 
   def index

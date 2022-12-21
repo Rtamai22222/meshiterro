@@ -34,6 +34,12 @@
                 <li class="nav-item">
                   <%= link_to 'マイページ', user_path(current_user.id), class: 'nav-link text-dark' %>
                 </li>
+                
+                <!--ここから勝手に記述-->
+                <li class="nav-item">
+                  <%= link_to "一覧ページ(index)", post_images_path, class: 'nav-link text-dark' %>
+                </li>
+                <!--ここまで-->
                
               <% else %>
                 <li class="nav-item">
